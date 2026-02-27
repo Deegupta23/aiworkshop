@@ -1,0 +1,55 @@
+# Sports2000 Database Schema Summary
+
+This is a summary of the sports2000 database schema used in the AI Workshop project.
+
+## Database Sequences
+
+- NextCustNum: Customer number sequence (starts at 1000, increment 5)
+- NextInvNum: Invoice number sequence (starts at 1000, increment 1)
+- NextOrdNum: Order number sequence (starts at 1000, increment 5)
+- NextItemNum: Item number sequence (starts at 100, increment 10)
+- NextRefNum: Reference number sequence (starts at 1, increment 1)
+- NextVisitor: Visitor number sequence (starts at 1000, increment 1)
+- NextSupplNum: Supplier number sequence (starts at 0, increment 1)
+- NextLocalDefNum: Local definition number sequence (starts at 0, increment 1)
+- NextWareNum: Warehouse number sequence (starts at 0, increment 1)
+- NextBinNum: Bin number sequence (starts at 0, increment 1)
+- NextPONum: Purchase order number sequence (starts at 0, increment 1)
+- NextEmpNum: Employee number sequence (starts at 0, increment 1)
+- NextInvTransNum: Inventory transaction number sequence (starts at 0, increment 1)
+
+## Key Tables
+
+### Customer
+Primary table for customer information including:
+- CustNum (INTEGER): Customer number (primary key)
+- Name (CHARACTER): Customer name
+- Address, City, State, PostalCode: Address information
+- Contact, Phone, FaxNum, EmailAddress: Contact information
+- SalesRep (CHARACTER): Sales representative
+- CreditLimit (DECIMAL): Credit limit
+- Balance (DECIMAL): Current balance
+- Terms (CHARACTER): Payment terms
+- DiscountRate (DECIMAL): Discount percentage
+- Comments (CHARACTER): Additional notes
+
+### Item
+Product/inventory items with pricing and stock information
+
+### Order
+Customer orders with order details
+
+### OrderLine
+Individual line items for orders
+
+### Benefits
+Employee benefits information
+
+### Employee
+Employee records
+
+## Usage
+
+The full schema definition is available in `dump/sports2000.df` which can be used to create the database.
+
+For this workshop, the Customer table is the primary focus, demonstrating the Business Entity pattern for data access.
